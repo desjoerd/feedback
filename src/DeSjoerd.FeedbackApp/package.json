@@ -1,0 +1,14 @@
+{
+  "name": "feedback-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile",
+  "scripts": {
+    "sass": "node-sass css -o wwwroot/css"
+  },
+  "author": "Sjoerd van der Meer",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^3.7.0"
+  }
+}

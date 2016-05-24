@@ -16,6 +16,8 @@ namespace DeSjoerd.FeedbackApp
                 app.UseDeveloperExceptionPage();
                 app.UseStatusCodePages();
             }
+
+            app.UseStaticFiles();
             
             app.UseMvc(routes => {
                 routes.MapRoute("default", "{controller=Feedback}/{action=Index}/{id?}");
