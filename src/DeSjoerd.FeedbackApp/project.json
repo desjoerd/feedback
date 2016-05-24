@@ -45,6 +45,13 @@
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
       "version": "1.0.0-preview1-final",
       "imports": "portable-net45+wp80+win8+wpa81+dnxcore50"
+    },
+    "Microsoft.AspNet.Tooling.Razor": {
+      "version": "1.0.0-rc1-final",
+      "imports": [
+        "dnxcore50",
+        "portable-net45+win8+wp8"
+      ]
     }
   }
 }

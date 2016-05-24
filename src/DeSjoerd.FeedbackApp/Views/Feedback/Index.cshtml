@@ -1,1 +1,10 @@
+@model DeSjoerd.FeedbackApp.Models.Feedback
+
 <p>Hoi</p>
+
+<form asp-controller="Feedback" asp-action="Create">
+
+    <input asp-for="Content" />
+
+    <input name="submit" value="Submit" type="submit" />
+</form>
