@@ -4,11 +4,14 @@
   "description": "",
   "main": "gulpfile",
   "scripts": {
-    "sass": "node-sass css -o wwwroot/css"
+    "sass": "node-sass css -o wwwroot/css",
+    "dev": "node_modules/.bin/concurrent \"node_modules/.bin/browser-sync start --port 3000 --files Views/**/*.cshtml\" \"dotnet watch\""
   },
   "author": "Sjoerd van der Meer",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "=2.12.10",
+    "concurrently": "^2.1.0",
     "node-sass": "^3.7.0"
   }
 }

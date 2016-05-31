@@ -13,7 +13,7 @@ namespace DeSjoerd.FeedbackApp
                 .AddCommandLine(args)
                 .AddEnvironmentVariables()
                 .Build();
-            
+
             var host = new WebHostBuilder()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseConfiguration(configuration)
@@ -21,7 +21,13 @@ namespace DeSjoerd.FeedbackApp
                 .UseKestrel()
                 .UseStartup<Startup>()
                 .Build();
-                
+
+            var env = host.Services.GetService(typeof(IHostingEnvironment)) as IHostingEnvironment;
+            if(env != null && env.IsDevelopment())
+            {
+                System.Net.WebRequest.CreateHttp("http://localhost:3000/__browser_sync__?method=reload").GetResponseAsync();
+            }
+
             host.Run();
         }
     }
