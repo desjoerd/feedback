@@ -4,11 +4,17 @@
   "description": "",
   "main": "gulpfile",
   "scripts": {
-    "sass": "node-sass css -o wwwroot/css"
+    "sass": "node-sass css -o wwwroot/css",
+    "dev": "./node_modules/.bin/concurrent \"dotnet watch\" \"node ./tasks/start.js\""
   },
   "author": "Sjoerd van der Meer",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^3.7.0"
+    "browser-sync": "^2.12.10",
+    "concurrently": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-dotnet": "^2.0.0",
+    "node-sass": "^3.7.0",
+    "run-sequence": "^1.2.1"
   }
 }
