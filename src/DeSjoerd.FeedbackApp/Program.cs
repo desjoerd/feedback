@@ -23,7 +23,7 @@ namespace DeSjoerd.FeedbackApp
                 .Build();
 
             var env = host.Services.GetService(typeof(IHostingEnvironment)) as IHostingEnvironment;
-            if(env != null && env.IsDevelopment())
+            if(env.IsDevelopment())
             {
                 System.Net.WebRequest.CreateHttp("http://localhost:3000/__browser_sync__?method=reload").GetResponseAsync();
             }
